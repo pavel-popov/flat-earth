@@ -1,11 +1,5 @@
 ;; shadow-cljs configuration
-{:source-paths
- ["src"]
-
- :dependencies
- [[reagent "1.0.0"]
-  [com.taoensso/timbre "5.1.2"]]
-
+{:deps true
  :dev-http {8080 "target/"}
  :builds {:app {:output-dir "target/"
                 :asset-path "."
