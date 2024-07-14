@@ -1,6 +1,6 @@
-#+TITLE: shadow-cljs-template
+#+TITLE: flat-earth, a shadow-cljs template
 
-A simple template for my shadow-cljs experiments.
+flat-earch repository is a template for a shadow-cljs project.
 
 * Install dependencies
 
@@ -27,7 +27,6 @@ npm run watch:css
 In Emacs run =cider-jack-in-cljs=, then select =shadow= and =:app=.
 
 * Deployment
-
 To deploy on to Github Pages to =gh-pages= branch, adjust origin url
 and run:
 

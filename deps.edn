@@ -1,4 +1,7 @@
 {:paths ["src"]
- :deps {thheller/shadow-cljs {:mvn/version "2.11.23"}
-        com.taoensso/timbre {:mvn/version "5.1.2"}
-        reagent/reagent     {:mvn/version "1.0.0"}}}
+ :deps {thheller/shadow-cljs     {:mvn/version "2.11.23"}
+        com.taoensso/timbre      {:mvn/version "5.1.2"}
+        reagent/reagent          {:mvn/version "1.0.0"}
+        borkdude/sci             {:mvn/version "0.2.4"}
+        nextjournal.clojure-mode {:git/url "https://github.com/nextjournal/clojure-mode"
+                                  :sha     "11a48c90bd1e17916c9aa9afcb2b25477ecfeb83"}}}

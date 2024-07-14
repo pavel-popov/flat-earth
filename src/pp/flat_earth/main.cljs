@@ -1,8 +1,9 @@
-(ns main
+(ns pp.flat-earth.main
   (:require
    [cljs.core.async :refer (chan put! <! go go-loop timeout)]
    [reagent.core :as r]
-   [reagent.dom :as r.dom]
+   [reagent.dom :as rdom]
+   [pp.flat-earth.editor :as editor]
    [taoensso.timbre :as timbre :refer-macros [info]]))
 
 
@@ -37,11 +38,13 @@
     {:on-click #(put! event-queue [:button-clicked])} "Click me"]
    [:button.bg-green-100.text-green-600.px-4
     {:on-click #(put! event-queue [:reset])} "Reset"]
-   [:pre (str @state)]])
+   [:pre (str @state)]
+   [editor/editor "Some source code"]])
 
 
 (defn mount [c]
-  (r.dom/render [c] (.getElementById js/document "app")))
+  (rdom/render [c] (.getElementById js/document "app"))
+  (editor/render))
 
 (defn reload! []
   (mount main-component)
